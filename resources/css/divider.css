@@ -1,0 +1,23 @@
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--green);
+  padding: 4rem 0;
+  color: var(--white);
+}
+
+.divider-wrapper_circle {
+  background-color: var(--white);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: 1.7rem;
+  transform: translateX(-50px);
+  background-image: url("../images/south.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

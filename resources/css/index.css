@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.body {
+  box-sizing: border-box;
+  overflow: overlay;
+}
+
+/* Root colors */
+
+:root {
+  --green: #549663;
+  --orange: #feb511;
+  --red: #d43b4a;
+  --black: #363636;
+  --beige: #f0d8a8;
+  --white: white;
+  --greyBg: #f1f0f5;
+  --greyDark: #353535c3;
+  --greyModel: #f3f6f0;
+}
+
+/* Capitalize text */
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+
+.weight-normal {
+  font-weight: normal;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* For centering and max width of 1920px */
+.main-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.green-text {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.red-text {
+  color: var(--red);
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--greyDark);
+  background-image: var(--greyDark);
+  border-radius: 5rem;
+  border: 2px solid rgb(252, 252, 252);
+}
+
+
