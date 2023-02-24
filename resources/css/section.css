@@ -41,6 +41,10 @@
   height: 540px;
 }
 
+.offers-container__two {
+  margin-top: 3rem;
+}
+
 .model {
   display: flex;
   justify-content: flex-start;
@@ -190,8 +194,11 @@
     width: fit-content;
   }
 
+  
+
   .model {
     width: 15rem;
+    height: unset;
   }
 
   .model-button-container button {
@@ -212,5 +219,19 @@
 
   .model-amount {
     font-size: 1.8rem;
+  }
+
+  .model-img-container {
+    width: 90%;
+    min-height: unset;
+  }
+
+  .model-button-container button {
+    width: 140px;
+    font-size: 0.5rem;
+  }
+
+  .model-button-container button h2 {
+    font-size: 0.8rem;
   }
 }

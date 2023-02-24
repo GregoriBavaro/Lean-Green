@@ -1,0 +1,139 @@
+.new-articles {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.new-articles-page__header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.new-articles-page__header p {
+  margin-top: 2rem;
+  inline-size: 870px;
+  font-size: 1.5rem;
+}
+
+.new-articles-wrapper {
+  max-width: 51rem;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1.6rem;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgb(247, 247, 247);
+  transition: all 0.5s;
+  padding: 2.3rem 2rem;
+}
+
+.new-articles-wrapper:hover {
+  transform: scale(1.025);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.new-articles-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1.6 1 ;
+  padding: 0 0.7rem
+}
+
+.new-articles-photo-wrapper {
+  order: 1;
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 0;
+}
+
+.new-articles-photo-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.new-articles-li {
+  list-style-type: none;
+  font-size: 0.9rem;
+}
+
+.new-articles-ul {
+  margin-left: 1.5rem;
+}
+
+.new-articles-li span {
+  font-weight: bold;
+}
+
+
+@media (max-width: 960px) {
+  .new-articles-page__header p {
+    inline-size: 570px;
+    font-size: 1.3rem;
+  }
+
+  .new-articles-page__header h1 {
+    inline-size: 570px;
+  }
+
+  .new-articles-wrapper {
+    width: 70%;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  .new-articles-ul {
+    margin-left: 0;
+  }
+  
+}
+
+@media (max-width: 670px) {
+  .new-articles-page__header p {
+    inline-size: 370px;
+    font-size: 1rem;
+  }
+
+  .new-articles-page__header h1 {
+    inline-size: 370px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .new-articles-page__header p {
+    inline-size: 270px;
+    font-size: 1rem;
+  }
+
+  .new-articles-page__header h1 {
+    inline-size: 270px;
+    font-size: 1.4rem;
+  }
+
+  .new-articles-h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .new-articles-p {
+    font-size: 0.7rem;
+  }
+
+  .new-articles-li {
+    font-size: 0.6rem;
+  }
+}

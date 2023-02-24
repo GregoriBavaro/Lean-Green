@@ -1,5 +1,10 @@
-
 let offersContainer = document.querySelector(".offers-container");
+let offersContainerTwo = document.querySelector(".offers-container__two");
+
+const positions = [
+  { position: offersContainer },
+  { position: offersContainerTwo },
+];
 
 //Data
 const data = [
@@ -14,7 +19,22 @@ const data = [
     saveText: "37.50%",
     amountText: "149.95",
     regularPriceText: "239.85",
-    buttonInnerText: "$5 Ground shipping"
+    buttonInnerText: "$5 Ground shipping",
+    position: offersContainer
+  },
+  {
+    modalBackgroundColor: "white",
+    header: "one time purchase",
+    headerColor: "beige",
+    headerText: "3 Pouches",
+    headerTextColor: "",
+    imgPath: "./resources/images/3pouches.png",
+    imgClass: "threePouches",
+    saveText: "37.50%",
+    amountText: "149.95",
+    regularPriceText: "239.85",
+    buttonInnerText: "$5 Ground shipping",
+    position: offersContainerTwo
   },
   {
     modalBackgroundColor: "grey",
@@ -27,7 +47,22 @@ const data = [
     saveText: "50%",
     amountText: "199.95",
     regularPriceText: "399.75",
-    buttonInnerText: "Free shipping"
+    buttonInnerText: "Free shipping",
+    position: offersContainer
+  },
+  {
+    modalBackgroundColor: "grey",
+    header: "subscribe & save",
+    headerColor: "green",
+    headerText: "Buy 4",
+    headerTextColor: "Get 1 FREE",
+    imgPath: "./resources/images/5pouches.png",
+    imgClass: "fivePouches",
+    saveText: "50%",
+    amountText: "199.95",
+    regularPriceText: "399.75",
+    buttonInnerText: "Free shipping",
+    position: offersContainerTwo
   },
 ];
 
@@ -50,7 +85,7 @@ let createElements = (initObj) => {
 };
 
 //Store unique element data
-
+let modelWrapper = [];
 let model = [];
 let modelHeader = [];
 let modelHeaderText = [];
@@ -62,10 +97,16 @@ let buyButtonContainer = [];
 
 //Using loop to reuse code for multiple models
 for (let i = 0; i < data.length; i++) {
+  modelWrapper = createElements({
+    Tag: "div",
+    classList: "model-wrapper",
+    childNodes: [data[i].position],
+  });
+
   model = createElements({
     Tag: "div",
     classList: `model ${data[i].modalBackgroundColor}`,
-    childNodes: [offersContainer],
+    childNodes: [modelWrapper],
   });
 
   modelHeader = createElements({
@@ -129,3 +170,5 @@ for (let i = 0; i < data.length; i++) {
   });
   payOptions.innerHTML = `<img src="./resources/images/pay-options.png" />`;
 }
+
+for (let i = 0; i < positions.length; i++) {}

@@ -1,0 +1,14 @@
+.money-back-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Breakpoints */
+
+@media (max-width: 480px) {
+    .money-back-container {
+        flex-direction: column;
+    }
+}

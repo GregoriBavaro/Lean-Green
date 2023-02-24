@@ -4,20 +4,62 @@
   align-items: center;
   text-align: center;
   background-color: var(--green);
-  padding: 4rem 0;
+  padding: 2rem 0;
   color: var(--white);
+}
+
+.divider-wrapper__textTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-wrapper__textTwo h1 {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .divider-wrapper_circle {
   background-color: var(--white);
-  width: 5rem;
-  height: 5rem;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  margin-top: 1.7rem;
-  transform: translateX(-50px);
+  margin-top: 0.4rem;
+  transform: translateX(-50%);
   background-image: url("../images/south.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Breakpoints */
+
+@media (max-width: 480px) {
+  .divider h2 {
+    font-size: 1.4rem;
+  }
+
+  .divider h1 {
+    font-size: 1.4rem;
+  }
+
+  .divider-wrapper_circle {
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-top: 0.4rem;
+    
+  }
+
+  .divider-wrapper__textTwo h2 {
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .divider-wrapper__textTwo {
+    display: block;
+    margin-left: 0rem;
+  }
 }

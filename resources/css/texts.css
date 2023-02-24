@@ -1,0 +1,17 @@
+.texts {
+  max-width: 900px;
+}
+
+@media (max-width: 960px) {
+  .texts {
+    max-width: unset;
+    width: 70%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .texts {
+    margin-top: 6rem;
+  }
+}

@@ -47,13 +47,13 @@ let articleTextWrapper = [];
 for (let i = 0; i < dataArticles.length; i++) {
   articlesWrapper = createElements({
     Tag: "div",
-    className: "articles-wrapper",
+    classList: "articles-wrapper",
     childNodes: [articles],
   });
 
   articleImgWrapper = createElements({
     Tag: "div",
-    className: "article-img",
+    classList: "article-img",
     childNodes: [articlesWrapper],
   });
 
@@ -61,7 +61,7 @@ for (let i = 0; i < dataArticles.length; i++) {
 
   articleHeaderWrapper = createElements({
     Tag: "div",
-    className: "article-header",
+    classList: "article-header",
     childNodes: [articlesWrapper],
   });
 
@@ -69,13 +69,13 @@ for (let i = 0; i < dataArticles.length; i++) {
 
   articleTextWrapper = createElements({
     Tag: "div",
-    className: "articles-text",
+    classList: "articles-text",
     childNodes: [articlesWrapper],
   });
 
   articleParagraphWrapper = createElements({
     Tag: "div",
-    className: "article-paragraph",
+    classList: "article-paragraph",
     childNodes: [articleTextWrapper],
   });
 
@@ -83,7 +83,7 @@ for (let i = 0; i < dataArticles.length; i++) {
 
   articleMessageWrapper = createElements({
     Tag: "div",
-    className: "article-message",
+    classList: "article-message",
     childNodes: [articleTextWrapper],
   });
 
