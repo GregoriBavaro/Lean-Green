@@ -72,6 +72,13 @@
   color: var(--red);
 }
 
+.grey-bg {
+  background-color: var(--greyBg)
+}
+
+.block {
+  display: block
+}
 /* Scroll bar */
 
 ::-webkit-scrollbar-track {

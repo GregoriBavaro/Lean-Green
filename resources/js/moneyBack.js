@@ -18,19 +18,19 @@ let moneyBackData = [
 
 let moneyBackContainer = [];
 
-for (let i = 0; i < moneyBackData.length; i++) {
-  moneyBackContainer = createElements({
+moneyBackData.map((items) => {
+moneyBackContainer = createElements({
     Tag: "div",
     classList: "money-back-container",
-    childNodes: [moneyBackData[i].position],
+    childNodes: [items.position],
   });
 
   moneyBackContainer.innerHTML = `
-<div>
-  <img src="./resources/images/money-back-guarantee.png" />
-</div>
-<div class="section-footer__text">
-  <p>${moneyBackData[i].text}</p>
-</div>
-`;
-}
+    <div>
+      <img src="./resources/images/money-back-guarantee.png" />
+    </div>
+    <div class="section-footer__text">
+      <p>${items.text}</p>
+    </div>`;
+})
+

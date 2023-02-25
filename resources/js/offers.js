@@ -20,7 +20,7 @@ const data = [
     amountText: "149.95",
     regularPriceText: "239.85",
     buttonInnerText: "$5 Ground shipping",
-    position: offersContainer
+    position: offersContainer,
   },
   {
     modalBackgroundColor: "white",
@@ -34,7 +34,7 @@ const data = [
     amountText: "149.95",
     regularPriceText: "239.85",
     buttonInnerText: "$5 Ground shipping",
-    position: offersContainerTwo
+    position: offersContainerTwo,
   },
   {
     modalBackgroundColor: "grey",
@@ -48,7 +48,7 @@ const data = [
     amountText: "199.95",
     regularPriceText: "399.75",
     buttonInnerText: "Free shipping",
-    position: offersContainer
+    position: offersContainer,
   },
   {
     modalBackgroundColor: "grey",
@@ -62,7 +62,7 @@ const data = [
     amountText: "199.95",
     regularPriceText: "399.75",
     buttonInnerText: "Free shipping",
-    position: offersContainerTwo
+    position: offersContainerTwo,
   },
 ];
 
@@ -96,22 +96,22 @@ let amountText = [];
 let buyButtonContainer = [];
 
 //Using loop to reuse code for multiple models
-for (let i = 0; i < data.length; i++) {
+data.map((items) => {
   modelWrapper = createElements({
     Tag: "div",
     classList: "model-wrapper",
-    childNodes: [data[i].position],
+    childNodes: [items.position],
   });
 
   model = createElements({
     Tag: "div",
-    classList: `model ${data[i].modalBackgroundColor}`,
+    classList: `model ${items.modalBackgroundColor}`,
     childNodes: [modelWrapper],
   });
 
   modelHeader = createElements({
     Tag: "div",
-    classList: `model-header ${data[i].headerColor}`,
+    classList: `model-header ${items.headerColor}`,
     childNodes: [model],
   });
 
@@ -120,35 +120,35 @@ for (let i = 0; i < data.length; i++) {
     classList: "model-header__text",
     childNodes: [modelHeader],
   });
-  modelHeaderText.innerHTML = `${data[i].header}`;
+  modelHeaderText.innerHTML = `${items.header}`;
 
   modelH4 = createElements({
     Tag: "h4",
     classList: "model-h4",
     childNodes: [model],
   });
-  modelH4.innerHTML = `${data[i].headerText} <span class="red-text">${data[i].headerTextColor}</span>`;
+  modelH4.innerHTML = `${items.headerText} <span class="red-text">${items.headerTextColor}</span>`;
 
   imgContainer = createElements({
     Tag: "div",
     classList: "model-img-container",
     childNodes: [model],
   });
-  imgContainer.innerHTML = `<img class="${data[i].imgClass}" src=${data[i].imgPath} />`;
+  imgContainer.innerHTML = `<img class="${items.imgClass}" src=${items.imgPath} />`;
 
   saveText = createElements({
     Tag: "div",
     classList: "model-save",
     childNodes: [model],
   });
-  saveText.innerHTML = `Save ${data[i].saveText}`;
+  saveText.innerHTML = `Save ${items.saveText}`;
 
   amountText = createElements({
     Tag: "h1",
     classList: "model-amount",
     childNodes: [model],
   });
-  amountText.innerHTML = `$${data[i].amountText}`;
+  amountText.innerHTML = `$${items.amountText}`;
 
   buyButtonContainer = createElements({
     Tag: "div",
@@ -157,10 +157,10 @@ for (let i = 0; i < data.length; i++) {
   });
   buyButtonContainer.innerHTML = `
   <button>
-    <h2 class="uppercase bold">buy now</h2>${data[i].buttonInnerText}
+    <h2 class="uppercase bold">buy now</h2>${items.buttonInnerText}
   </button> 
   <h6 class="weight-500">Regular price: 
-    <span class="line-through">${data[i].regularPriceText}
+    <span class="line-through">${items.regularPriceText}
   </span></h6>`;
 
   let payOptions = createElements({
@@ -169,6 +169,4 @@ for (let i = 0; i < data.length; i++) {
     childNodes: [model],
   });
   payOptions.innerHTML = `<img src="./resources/images/pay-options.png" />`;
-}
-
-for (let i = 0; i < positions.length; i++) {}
+});

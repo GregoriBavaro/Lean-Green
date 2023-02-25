@@ -7,14 +7,12 @@ const swiperDataTwo = [
       "You won't regret it. I was amazed at the quality of it.I am really satisfied with my it.",
     from: "T.M.",
     review: 5,
-    
   },
   {
     message:
-    "Your product was recommended by my dietitian so I immediately ordered a couple of months supply. By way of background, I have real resistance to taking medications and she felt your product might be different. How right she was!",
+      "Your product was recommended by my dietitian so I immediately ordered a couple of months supply. By way of background, I have real resistance to taking medications and she felt your product might be different. How right she was!",
     from: "V.R.",
     review: 5,
-    
   },
 ];
 //Data first swiper
@@ -24,25 +22,19 @@ const swiperData = [
       "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what my body has been lacking.",
     from: "S.J.",
     review: 4,
-    
   },
   {
     message:
       "We're loving it. This is simply unbelievable! I like it more and more each day because it makes my life a lot easier.",
     from: "E.J.",
     review: 5,
-    
   },
 ];
-
-
-
 
 //First swiper slides
 let swiperSlides = [];
 //Second swiper slides
 let swiperSlidesTwo = [];
-
 
 //First swiper elements
 let swiperContainer = createElements({
@@ -85,7 +77,7 @@ let = swiperWrapperTwo = createElements({
 
 //First swiper
 
-for (let i = 0; i < swiperData.length; i++) {
+swiperData.map((items) => {
   swiperSlidesTwo = createElements({
     Tag: "div",
     classList: "mySwiper-slide swiper-slide",
@@ -94,7 +86,7 @@ for (let i = 0; i < swiperData.length; i++) {
 
   //Adding star logic by review
   let star = "&#x2B50;";
-  let number = swiperData[i].review;
+  let number = items.review;
 
   const arrayOfStars = [...Array(number)].map(() => star);
   const addShift = arrayOfStars.join(",").replace(/,/g, " ").split();
@@ -102,16 +94,15 @@ for (let i = 0; i < swiperData.length; i++) {
   swiperSlidesTwo.innerHTML = `
   <div>
     <div class="quotes"><img src="./resources/images/quotes.png" alt="quotes" /></div>
-    <p class="italic">"${swiperData[i].message}"</p>
-    <h4 class="green-text">${swiperData[i].from}</h4>
+    <p class="italic">"${items.message}"</p>
+    <h4 class="green-text">${items.from}</h4>
     <div class="rating">${addShift}</div>
   </div>`;
-}
-
+});
 
 //Second swiper
 
-for (let i = 0; i < swiperDataTwo.length; i++) {
+swiperDataTwo.map((items) => {
   swiperSlidesTwo = createElements({
     Tag: "div",
     classList: "swiper-slide swiper-slide-two",
@@ -120,7 +111,7 @@ for (let i = 0; i < swiperDataTwo.length; i++) {
 
   //Adding star logic from review rating
   let star = "&#x2B50;";
-  let number = swiperDataTwo[i].review;
+  let number = items.review;
 
   const arrayOfStars = [...Array(number)].map(() => star);
   const addShift = arrayOfStars.join(",").replace(/,/g, " ").split();
@@ -128,8 +119,8 @@ for (let i = 0; i < swiperDataTwo.length; i++) {
   swiperSlidesTwo.innerHTML = `
   <div>
     <div class="quotes"><img src="./resources/images/quotes.png" alt="quotes" /></div>
-    <p class="italic">"${swiperDataTwo[i].message}"</p>
-    <h4 class="green-text">${swiperDataTwo[i].from}</h4>
+    <p class="italic">"${items.message}"</p>
+    <h4 class="green-text">${items.from}</h4>
     <div class="rating">${addShift}</div>
   </div>`;
-}
+});

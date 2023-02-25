@@ -1,0 +1,148 @@
+.grey-banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grey-banner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1170px;
+  padding: 3rem 0;
+}
+
+.grey-banner-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.grey-banner-div__left {
+  flex: 1 1 0px;
+}
+
+.grey-banner-div__left-ul {
+  text-align: right;
+}
+
+.grey-banner-wrapper ul li {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.li-div-left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.li-div-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grey-banner-div__right {
+  flex: 1 1 0px;
+}
+
+.grey-banner-header {
+  text-align: center;
+}
+
+.grey-banner-header h1 {
+  font-size: 50px;
+}
+
+.grey-banner-header p {
+  inline-size: 1170px;
+  margin-top: 0.8rem;
+  font-size: 38px;
+}
+
+/* Breakpoints */
+
+@media (max-width: 1180px) {
+  .grey-banner-wrapper {
+    max-width: unset;
+    padding: 2rem;
+  }
+
+  .grey-banner-header p {
+    inline-size: 90vw;
+    margin-top: 0.8rem;
+    font-size: 3vw;
+  }
+
+  .grey-banner-wrapper ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .grey-banner-wrapper ul li {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .grey-banner-div__img {
+    text-align: center;
+  }
+
+  .grey-banner-div__img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 860px) {
+  .grey-banner-div__img {
+    display: none;
+  }
+
+  .li-div-left {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media (max-width: 790px) {
+  .bottom-section {
+    margin-top: 5rem;
+  }
+
+  .grey-banner-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .grey-banner-container p {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .bottom-section {
+    margin-top: unset;
+  }
+
+  .grey-banner-wrapper ul li {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .grey-banner-container h1 {
+    font-size: 20px;
+    width: unset;
+  }
+
+}

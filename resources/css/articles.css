@@ -13,7 +13,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   padding: 6rem 0 3rem 0;
-  max-width: 52rem;
+  max-width: 1170px;
 }
 
 .articles-wrapper {
@@ -50,7 +50,13 @@
 
 /* Breakpoints */
 
-@media (max-width: 960px) {
+@media (max-width: 1250px) {
+  .articles-wrapper {
+    width: 29rem;
+  }
+}
+
+@media (max-width: 980px) {
   .articles {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -85,5 +91,9 @@
 @media (max-width: 450px) {
   .article-header h1 {
     font-size: 1.3rem;
+  }
+
+  .article-container {
+    padding: 0 0 2rem 0
   }
 }

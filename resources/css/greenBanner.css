@@ -1,5 +1,5 @@
 .green-banner-wrapper {
-  min-width: 940px;
+  min-width: 1250px;
   background-color: var(--green);
   padding: 2rem 0rem;
   border-radius: 0.4rem;
@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word
 }
 
 .green-been-wrapper__para-one {
@@ -58,12 +59,15 @@
   padding: 2rem 0rem;
 }
 
+.green-been-wrapper__inside p {
+  font-size: 20px
+}
 /* Breakpoints */
 
-@media (max-width: 960px) {
+@media (max-width: 1300px) {
   .green-banner-wrapper {
     min-width: unset;
-    max-width: 82%;
+    max-width: 90%;
   }
 
   .green-been-wrapper__inside {
@@ -121,8 +125,8 @@
 
   .green-banner {
     width: 80%;
-    min-height: 70vh;
-    background-color: rgb(241, 240, 245);
+    
+    background-color: rgba(241, 240, 245, 0);
     border-radius: 0.7rem;
   }
 

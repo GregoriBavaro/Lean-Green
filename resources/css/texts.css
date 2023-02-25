@@ -1,12 +1,12 @@
 .texts {
-  max-width: 900px;
+  max-width: 1170px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1250px) {
   .texts {
     max-width: unset;
-    width: 70%;
-    margin-top: 1rem;
+    width: 80%;
+    margin-top: 2rem;
   }
 }
 

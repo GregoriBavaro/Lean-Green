@@ -7,6 +7,11 @@
   gap: 2rem;
 }
 
+
+.under-hero-container h4 {
+  font-size: 40px;
+}
+
 .section-footer {
   display: flex;
   align-items: flex-end;
@@ -14,7 +19,7 @@
 
 .center-text {
   text-align: center;
-  inline-size: 650px;
+  inline-size: 820px;
   font-size: 1.8rem;
 }
 
@@ -22,6 +27,10 @@
   font-size: 1rem;
   font-weight: bold;
   margin-top: 1rem;
+}
+
+.section-header__text p {
+  font-size: 22px;
 }
 
 .section-footer__text {
@@ -38,7 +47,6 @@
   align-items: flex-start;
   gap: 30px;
   width: 720px;
-  height: 540px;
 }
 
 .offers-container__two {
@@ -50,11 +58,11 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 18rem;
+  width: 400px;
   border-radius: 0.6rem;
-  height: 100%;
   border: 1px solid var(--greyBg);
   gap: 1rem;
+  padding: 0 0 1rem 0;
   transition: all 0.5s;
 }
 
@@ -88,6 +96,7 @@
 .model-header__text {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 30px;
 }
 
 .model-img-container {
@@ -108,6 +117,11 @@
 
 .model-amount {
   color: var(--green);
+  font-size: 52px;
+}
+
+.model-save {
+  font-size: 20px
 }
 
 .model-button-container {
@@ -117,14 +131,28 @@
   flex-direction: column;
 }
 
+.model-button-container h6 {
+  font-size: 18px;
+  margin-top: 0.3rem;
+}
+
+.model-button-container h2 {
+  font-size: 28px
+}
+
+
 .model-button-container button {
   border: none;
   background-color: var(--orange);
-  width: 240px;
+  width: 340px;
   padding: 0.5rem;
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.5s;
+}
+
+.model-h4 {
+  font-size: 24px;
 }
 
 .model-button-container button:hover {
@@ -132,9 +160,7 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.model-button-container h6 {
-  margin-top: 0.3rem;
-}
+
 
 .model-pay-options__wrapper {
   width: 50%;
@@ -146,12 +172,16 @@
 
 /* Breakpoints */
 
-@media (max-width: 740px) {
+@media (max-width: 880px) {
   .offers-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: fit-content;
+  }
+
+  .under-hero-container h4 {
+    font-size: 4vw;
   }
 
   .model {

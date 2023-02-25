@@ -35,7 +35,7 @@ let dataArticles = [
     articleParagraph:
       "The ingredients inside <span>Green&Lean</span> increase Brain Derived Neurotrophic Factors (BDNF). This nourishes your brain’s neurons, maximizes memory, and accelerates thinking.<br /><br /> It can encourage the production of neurons in the brain, and protects from embarrassing “mental hiccups” and forgettfullness.  ",
     articleMessage: "Feel whip-smart on a more consistent basis.",
-  }
+  },
 ];
 
 let articlesWrapper = [];
@@ -44,7 +44,7 @@ let articleHeaderWrapper = [];
 let articleMessageWrapper = [];
 let articleTextWrapper = [];
 
-for (let i = 0; i < dataArticles.length; i++) {
+dataArticles.map((items) => {
   articlesWrapper = createElements({
     Tag: "div",
     classList: "articles-wrapper",
@@ -57,7 +57,7 @@ for (let i = 0; i < dataArticles.length; i++) {
     childNodes: [articlesWrapper],
   });
 
-  articleImgWrapper.innerHTML = `<img src="${dataArticles[i].imgPath}" alt="${dataArticles[i].imgAlt}" />`;
+  articleImgWrapper.innerHTML = `<img src="${items.imgPath}" alt="${items.imgAlt}" />`;
 
   articleHeaderWrapper = createElements({
     Tag: "div",
@@ -65,7 +65,7 @@ for (let i = 0; i < dataArticles.length; i++) {
     childNodes: [articlesWrapper],
   });
 
-  articleHeaderWrapper.innerHTML = `<h1 class="green-text uppercase">${dataArticles[i].articleHeader}</h1>`
+  articleHeaderWrapper.innerHTML = `<h1 class="green-text uppercase">${items.articleHeader}</h1>`;
 
   articleTextWrapper = createElements({
     Tag: "div",
@@ -79,7 +79,7 @@ for (let i = 0; i < dataArticles.length; i++) {
     childNodes: [articleTextWrapper],
   });
 
-  articleParagraphWrapper.innerHTML = `<p>${dataArticles[i].articleParagraph}</p>`
+  articleParagraphWrapper.innerHTML = `<p>${items.articleParagraph}</p>`;
 
   articleMessageWrapper = createElements({
     Tag: "div",
@@ -87,5 +87,5 @@ for (let i = 0; i < dataArticles.length; i++) {
     childNodes: [articleTextWrapper],
   });
 
-  articleMessageWrapper.innerHTML = `<p class="red-text bold italic">${dataArticles[i].articleMessage}</p>`
-}
+  articleMessageWrapper.innerHTML = `<p class="red-text bold italic">${items.articleMessage}</p>`;
+});

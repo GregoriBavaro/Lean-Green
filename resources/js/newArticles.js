@@ -135,7 +135,7 @@ let newArticlesUl = [];
 let newArticlesPhotoWrapper = [];
 let newArticlesLi = [];
 
-for (let i = 0; i < newArticles.length; i++) {
+newArticles.map((items) => {
   newArticleWrapper = createElements({
     Tag: "div",
     classList: "new-articles-wrapper",
@@ -154,7 +154,7 @@ for (let i = 0; i < newArticles.length; i++) {
     childNodes: [newArticleWrapper],
   });
 
-  newArticlesPhotoWrapper.innerHTML = `<img src="${newArticles[i].imgPath}" />`;
+  newArticlesPhotoWrapper.innerHTML = `<img src="${items.imgPath}" />`;
 
   newArticlesH1 = createElements({
     Tag: "h1",
@@ -162,7 +162,7 @@ for (let i = 0; i < newArticles.length; i++) {
     childNodes: [newArticlesText],
   });
 
-  newArticlesH1.innerHTML = newArticles[i].header;
+  newArticlesH1.innerHTML = items.header;
 
   newArticlesP = createElements({
     Tag: "p",
@@ -170,7 +170,7 @@ for (let i = 0; i < newArticles.length; i++) {
     childNodes: [newArticlesText],
   });
 
-  newArticlesP.innerHTML = newArticles[i].text;
+  newArticlesP.innerHTML = items.text;
 
   newArticlesUl = createElements({
     Tag: "ul",
@@ -178,18 +178,16 @@ for (let i = 0; i < newArticles.length; i++) {
     childNodes: [newArticlesText],
   });
 
-  let newArticlesLi = [];
-
   newArticlesLi = createElements({
     Tag: "li",
     classList: "new-articles-li",
     childNodes: [newArticlesUl],
   });
 
-  let example = [...newArticles[i].lists]
+  let example = [...items.lists]
   let array = example.map( (e) => ("&#x2022;"+" "+e + "<br>") ).join('');
-  
   newArticlesLi.innerHTML = `${array}`
     
-  
-}
+})
+
+
