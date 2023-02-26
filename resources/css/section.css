@@ -1,12 +1,11 @@
 .section {
-  padding: 2rem 0 2rem 0;
+  padding: 3rem 0 3rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
 }
-
 
 .under-hero-container h4 {
   font-size: 40px;
@@ -49,7 +48,8 @@
   width: 720px;
 }
 
-.offers-container__two {
+.offers-container__two,
+.offers-container__three {
   margin-top: 3rem;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .model-save {
-  font-size: 20px
+  font-size: 20px;
 }
 
 .model-button-container {
@@ -137,9 +137,8 @@
 }
 
 .model-button-container h2 {
-  font-size: 28px
+  font-size: 28px;
 }
-
 
 .model-button-container button {
   border: none;
@@ -159,8 +158,6 @@
   transform: scale(1.025);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
-
 
 .model-pay-options__wrapper {
   width: 50%;
@@ -223,8 +220,6 @@
   .offers-container {
     width: fit-content;
   }
-
-  
 
   .model {
     width: 15rem;

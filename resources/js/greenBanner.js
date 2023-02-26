@@ -1,31 +1,52 @@
+//Data
+import { greenBannerData } from "../data/banners-data.js";
+
+//Parent element
 let greenBanner = document.querySelector(".green-banner");
+let greenBannerTwo = document.querySelector(".green-banner__two");
 
 let greenBannerWrapper = [];
 
-greenBannerWrapper = createElements({
-  Tag: "div",
-  classList: "green-banner-wrapper",
-  childNodes: [greenBanner],
-});
+const greenBannerLocations = [greenBanner, greenBannerTwo];
 
-greenBannerWrapper.innerHTML = `
-<h1>RISK FREE 90 DAY MONEY BACK GUARANTEE</h1>
+const {
+  headerText: h1,
+  para1,
+  para2,
+  para3,
+  para4,
+  para5,
+  para6,
+  para7,
+  para8,
+  imgPath,
+} = greenBannerData;
+
+greenBannerLocations.map((location) => {
+  greenBannerWrapper = createElements({
+    Tag: "div",
+    classList: "green-banner-wrapper",
+    childNodes: [location],
+  });
+
+  greenBannerWrapper.innerHTML = `
+<h1>${h1}</h1>
 <div class="green-been-wrapper__inside">
-    <div class="green-been-wrapper__para-one"><p>Go ahead and take Green&Lean for a well-deserved “test drive” over the next 10, 20, even 30 days – as long as you’d like over the next six months.
+    <div class="green-been-wrapper__para-one"><p>${para1}
     <br><br>
-    If you don’t feel a dramatic improvement in your energy, focus, and mood... if you don’t tackle your day with a newfound sense of confidence, concentration, and an unshakable optimism... and if you feel even a single jitter from our energizing formula...
+    ${para2}
     <br><br>
-    You don’t pay a dime. 
+    ${para3}
     <br><br>
-    Simply shoot us a quick email at customerservice@greenandlean.com and I’ll  personally see you get a full refund, down to the last penny.
+    ${para4}
     <br><br>
-    No questions. No hoops. No weird qualifications or fine print.</p></div>
-    <div class="green-been-wrapper__img"><img src="./resources/images/products/1pouches.png" /></div>
-    <div class="green-been-wrapper__para-two"><p>You risk nothing other than living a life where you’re just surviving...
+    ${para5}</p></div>
+    <div class="green-been-wrapper__img"><img src=${imgPath} /></div>
+    <div class="green-been-wrapper__para-two"><p>${para6}
     <br><br>
-    When you should be thriving.
+    ${para7}
     <br><br>
-    So click the button below now to give yourself a well-deserved shot at booming, natural energy levels with Green&Lean.</p></div>
+    ${para8}</p></div>
 </div>
-
 `;
+});

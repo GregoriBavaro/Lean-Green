@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./resources/css/greenBanner.css" />
     <link rel="stylesheet" href="./resources/css/greyBanner.css" />
     <link rel="stylesheet" href="./resources/css/beigeBanner.css" />
+    <link rel="stylesheet" href="./resources/css/dropdown.css" />
+    <link rel="stylesheet" href="./resources/css/footer.css" />
     <!-- Swiper -->
     <link
       rel="stylesheet"
@@ -90,20 +92,54 @@
       <section class="section beige-green-bg beige-section">
         <div class="beige-banner-container"></div>
       </section>
+      <!-- Divider -->
+      <div class="divider divider__three"></div>
+      <section class="section">
+        <div class="offers-container offers-container__three"></div>
+        <div class="section-footer__three"></div>
+      </section>
+      <section class="section grey-bg grey-section">
+        <!-- Green Banner -->
+        <div class="green-banner__two"></div>
+      </section>
+      <section class="section">
+        <div class="offers-container offers-container__four"></div>
+        <div class="section-footer__four"></div>
+      </section>
+      <!-- Dropdowns  -->
+      <section class="section grey-bg grey-section questions">
+        <!-- Dropdowns This would have been so easy with react.js state management :) -->
+        <div class="dropdown-messages-container"></div>
+      </section>
     </main>
-    <script src="./resources/functions/createElement.js"></script>
+    <footer class="section footer-container">
+
+    </footer>
+    <!-- functions -->
+    <script src="./resources/functions/use-createElements.js"></script>
     <script src="./resources/functions/use-fetch.js"></script>
-    <script src="./resources/js/offers.js"></script>
-    <script src="./resources/js/divider.js"></script>
+    <!-- data -->
+    <script type="module" src="./resources/data/offers-data.js"></script>
+    <script type="module" src="./resources/data/banners-data.js"></script>
+    <script type="module" src="./resources/data/divider-data.js"></script>
+    <script type="module" src="./resources/data/moneyBack-data.js"></script>
+    <script type="module" src="./resources/data/texts-data.js"></script>
+    <script type="module" src="./resources/data/dropdown-data.js"></script>
+    <script type="module" src="./resources/data/footer-data.js"></script>
+    <!-- components -->
+    <script type="module" src="./resources/js/offers.js"></script>
+    <script type="module" src="./resources/js/divider.js"></script>
     <script src="./resources/js/articles.js"></script>
     <script src="./resources/js/buyButton.js"></script>
-    <script src="./resources/js/moneyBack.js"></script>
+    <script type="module" src="./resources/js/moneyBack.js"></script>
     <script src="./resources/js/swiper.js"></script>
     <script src="./resources/js/newArticles.js"></script>
-    <script src="./resources/js/texts.js"></script>
-    <script src="./resources/js/greenBanner.js"></script>
-    <script src="./resources/js/greyBanner.js"></script>
-    <script src="./resources/js/beigeBanner.js"></script>
+    <script type="module" src="./resources/js/texts.js"></script>
+    <script type="module" src="./resources/js/greenBanner.js"></script>
+    <script type="module" src="./resources/js/greyBanner.js"></script>
+    <script type="module" src="./resources/js/beigeBanner.js"></script>
+    <script type="module" src="./resources/js/dropdown.js"></script>
+    <script type="module" src="./resources/js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>

@@ -78,7 +78,7 @@ let = swiperWrapperTwo = createElements({
 //First swiper
 
 swiperData.map((items) => {
-  swiperSlidesTwo = createElements({
+  swiperSlides = createElements({
     Tag: "div",
     classList: "mySwiper-slide swiper-slide",
     childNodes: [swiperWrapper],
@@ -91,7 +91,7 @@ swiperData.map((items) => {
   const arrayOfStars = [...Array(number)].map(() => star);
   const addShift = arrayOfStars.join(",").replace(/,/g, " ").split();
 
-  swiperSlidesTwo.innerHTML = `
+  swiperSlides.innerHTML = `
   <div>
     <div class="quotes"><img src="./resources/images/quotes.png" alt="quotes" /></div>
     <p class="italic">"${items.message}"</p>

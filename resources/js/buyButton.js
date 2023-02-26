@@ -1,9 +1,19 @@
+//Parent element to append
 let articlesContainer = document.querySelector(".article-container");
+let BeigeContainer = document.querySelector(".beige-section");
 
-let button = createElements({
+const locations = [articlesContainer, BeigeContainer]
+
+//Buy button
+let button = [];
+
+locations.map((location) => {
+  button = createElements({
   Tag: "button",
   classList: "buy-button bold uppercase",
-  childNodes: [articlesContainer],
+  childNodes: [location],
 });
 
-button.innerHTML = "buy now";
+button.innerText = "buy now";
+})
+

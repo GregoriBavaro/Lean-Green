@@ -1,20 +1,5 @@
-let divider = document.querySelector(".divider");
-let dividerTwo = document.querySelector(".divider__two");
-
-const dividerData = [
-  {
-    h2: "Experience",
-    h1: "POWERFUL RESULTS",
-    position: divider,
-    className: "divider-wrapper__text",
-  },
-  {
-    h2: "Rediscover What Natural Energy ",
-    h1: "Really Feels Like",
-    position: dividerTwo,
-    className: "divider-wrapper__textTwo",
-  },
-];
+//Data
+import { dividerData } from "../data/divider-data.js";
 
 let wrapper = [];
 
@@ -32,5 +17,3 @@ dividerData.map((items) => {
     </div>
     <div class="divider-wrapper_circle"></div>`;
 });
-
-

@@ -1,14 +1,19 @@
+//Data
+import { texts } from "../data/texts-data.js";
+
+//Parent element
 let textsContainer = document.querySelector(".texts");
 
+
 textsContainer.innerHTML = `<p>
-Try a <span class="bold">30-Day supply </span>or save big on our <span class="bold">Subscribe and Save option!</span>
+${texts.paraOne.word[0]}<span class="bold">${texts.paraOne.word[1]}</span>${texts.paraOne.word[2]}<span class="bold">${texts.paraOne.word[3]}</span>
 <br><br>
-<span class="green-text">Green&Lean</span> is one of the healthiest and cleanest  energy supplements on the market.
+<span class="green-text">${texts.paraTwo.word[0]}</span>${texts.paraTwo.word[1]}
 <br><br>
-When you begin using <span class="green-text">Green&Lean</span> you will experience a mind that’s focused, alert, and uplifted that will leave you never wanting to be without this energy phenomenon.
+${texts.paraThree.word[0]}<span class="green-text">${texts.paraThree.word[1]}</span>${texts.paraThree.word[2]}
 <br><br>
-<span class="bold">Feel the results in minutes after your first dose or your money back, guaranteed.</span>
+<span class="bold">${texts.paraFour.word[0]}</span>
 <br><br>
-At WholeHarvest, we provide you with the options you want to experience phenomenal results in one convenient bundle that saves you time and money. Because why waste time living unmotivated?
+${texts.paraFive.word[0]}
 </p>
 `;

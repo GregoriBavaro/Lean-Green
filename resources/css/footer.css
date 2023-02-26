@@ -1,0 +1,27 @@
+
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.links-wrapper a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.links-container:after {
+  content: "";
+  background: #F1F0F5;
+  position: absolute;
+  bottom: -1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 140%;
+}

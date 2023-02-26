@@ -1,22 +1,13 @@
+//Data
+import {
+  greyBannerDataLeft,
+  greyBannerDataRight,
+  greyBannerHeaderText,
+  greyBannerHeaderParagraph,
+} from "../data/banners-data.js";
+
 // Main append parent element
 let greyBannerContainer = document.querySelector(".grey-banner-container");
-
-//Data
-const greyBannerHeaderText = "why green&lean?";
-const greyBannerHeaderParagraph =
-  "A powerful combination of synergistic ingredients formulated to fuel your most vibrant energy.";
-
-// read local JSON
-fetchData("./resources/data/greyBanner.json", setData);
-
-let greyBannerDataLeft = [];
-let greyBannerDataRight = [];
-
-// set response
-function setData(data) {
-  greyBannerDataLeft = [...data.left.li];
-  greyBannerDataRight = [...data.right.li];
-}
 
 //children of greyBannerContainer
 let greyBannerHeader = createElements({
@@ -78,25 +69,22 @@ let greyBannerDivRightUl = createElements({
   childNodes: [greyBannerDivRight],
 });
 
+//Map left
+greyBannerDataLeft.map((item) => {
+  greyBannerDivLeftLi = createElements({
+    Tag: "li",
+    classList: "li block",
+    childNodes: [greyBannerDivLeftUl],
+  });
+  greyBannerDivLeftLi.innerHTML = `<div class="li-div-left"><span>${item}</span><img src="./resources/images/icons/check.png" alt="green&lean" /></div> `;
+});
 
-//Set timeout 2ms to render data from local json
-setTimeout(() => {
-  //Map left
-  greyBannerDataLeft.map((item) => {
-    greyBannerDivLeftLi = createElements({
-      Tag: "li",
-      classList: "li block",
-      childNodes: [greyBannerDivLeftUl],
-    });
-    greyBannerDivLeftLi.innerHTML = `<div class="li-div-left"><span>${item}</span><img src="./resources/images/icons/check.png" alt="green&lean" /></div> `;
+//Map right
+greyBannerDataRight.map((item) => {
+  greyBannerDivRightLi = createElements({
+    Tag: "li",
+    classList: "li block",
+    childNodes: [greyBannerDivRightUl],
   });
-  //Map right
-  greyBannerDataRight.map((item) => {
-    greyBannerDivRightLi = createElements({
-      Tag: "li",
-      classList: "li block",
-      childNodes: [greyBannerDivRightUl],
-    });
-    greyBannerDivRightLi.innerHTML = `<div class="li-div-right"><img src="./resources/images/icons/check.png" alt="green&lean" /><span>${item}</span></div>  `;
-  });
-}, 200);
+  greyBannerDivRightLi.innerHTML = `<div class="li-div-right"><img src="./resources/images/icons/check.png" alt="green&lean" /><span>${item}</span></div>  `;
+});
