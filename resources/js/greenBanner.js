@@ -20,7 +20,7 @@ greenBannerWrapper.innerHTML = `
     Simply shoot us a quick email at customerservice@greenandlean.com and I’ll  personally see you get a full refund, down to the last penny.
     <br><br>
     No questions. No hoops. No weird qualifications or fine print.</p></div>
-    <div class="green-been-wrapper__img"><img src="./resources/images/1pouches.png" /></div>
+    <div class="green-been-wrapper__img"><img src="./resources/images/products/1pouches.png" /></div>
     <div class="green-been-wrapper__para-two"><p>You risk nothing other than living a life where you’re just surviving...
     <br><br>
     When you should be thriving.

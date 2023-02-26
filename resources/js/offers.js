@@ -14,7 +14,7 @@ const data = [
     headerColor: "beige",
     headerText: "3 Pouches",
     headerTextColor: "",
-    imgPath: "./resources/images/3pouches.png",
+    imgPath: "./resources/images/products/3pouches.png",
     imgClass: "threePouches",
     saveText: "37.50%",
     amountText: "149.95",
@@ -28,7 +28,7 @@ const data = [
     headerColor: "beige",
     headerText: "3 Pouches",
     headerTextColor: "",
-    imgPath: "./resources/images/3pouches.png",
+    imgPath: "./resources/images/products/3pouches.png",
     imgClass: "threePouches",
     saveText: "37.50%",
     amountText: "149.95",
@@ -42,7 +42,7 @@ const data = [
     headerColor: "green",
     headerText: "Buy 4",
     headerTextColor: "Get 1 FREE",
-    imgPath: "./resources/images/5pouches.png",
+    imgPath: "./resources/images/products/5pouches.png",
     imgClass: "fivePouches",
     saveText: "50%",
     amountText: "199.95",
@@ -56,7 +56,7 @@ const data = [
     headerColor: "green",
     headerText: "Buy 4",
     headerTextColor: "Get 1 FREE",
-    imgPath: "./resources/images/5pouches.png",
+    imgPath: "./resources/images/products/5pouches.png",
     imgClass: "fivePouches",
     saveText: "50%",
     amountText: "199.95",
@@ -66,23 +66,7 @@ const data = [
   },
 ];
 
-// Custom function for creating HTML DOM Elements that receives an object for element config
 
-let createElements = (initObj) => {
-  var element = document.createElement(initObj.Tag);
-  for (var prop in initObj) {
-    if (prop === "childNodes") {
-      initObj.childNodes.forEach(function (node) {
-        node.appendChild(element);
-      });
-    } else if (prop === "attributes") {
-      initObj.attributes.forEach(function (attr) {
-        element.setAttribute(attr.key, attr.value);
-      });
-    } else element[prop] = initObj[prop];
-  }
-  return element;
-};
 
 //Store unique element data
 let modelWrapper = [];

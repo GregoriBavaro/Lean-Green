@@ -28,7 +28,7 @@
   left: 50%;
   margin-top: 0.4rem;
   transform: translateX(-50%);
-  background-image: url("../images/south.png");
+  background-image: url("../images/icons/south.png");
   background-repeat: no-repeat;
   background-position: center;
 }

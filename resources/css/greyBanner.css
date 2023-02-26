@@ -113,7 +113,7 @@
 }
 
 @media (max-width: 790px) {
-  .bottom-section {
+  .grey-section {
     margin-top: 5rem;
   }
 
@@ -131,7 +131,7 @@
 }
 
 @media (max-width: 450px) {
-  .bottom-section {
+  .grey-section {
     margin-top: unset;
   }
 

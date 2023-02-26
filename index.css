@@ -76,6 +76,10 @@
   background-color: var(--greyBg)
 }
 
+.beige-green-bg {
+  background-image: url("./resources/images/background/06.png");
+}
+
 .block {
   display: block
 }

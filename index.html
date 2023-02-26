@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./resources/css/hero.css" />
     <link rel="stylesheet" href="./resources/css/section.css" />
     <link rel="stylesheet" href="./resources/css/divider.css" />
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./resources/css/texts.css" />
     <link rel="stylesheet" href="./resources/css/greenBanner.css" />
     <link rel="stylesheet" href="./resources/css/greyBanner.css" />
+    <link rel="stylesheet" href="./resources/css/beigeBanner.css" />
     <!-- Swiper -->
     <link
       rel="stylesheet"
@@ -64,14 +65,15 @@
       <!-- Divider -->
       <div class="divider"></div>
       <!-- Articles -->
-      <div class="article-container">
+      <section class="article-container">
         <div class="articles"></div>
         <!-- + Swiper -->
-      </div>
-      <div class="new-articles"></div>
+      </section>
+      <section class="new-articles"></section>
+      <!-- Divider -->
       <div class="divider divider__two"></div>
-      <!-- Section -->
-      <div class="section">
+      <!--Offers Section -->
+      <section class="section">
         <div class="offers-container offers-container__two"></div>
         <div class="section-footer__two"></div>
         <!-- Swiper -->
@@ -79,12 +81,18 @@
         <div class="texts"></div>
         <!-- Green Banner -->
         <div class="green-banner"></div>
-      </div>
-      <!-- Section -->
-      <section class="section grey-bg bottom-section">
+      </section>
+      <!--Grey Section -->
+      <section class="section grey-bg grey-section">
         <div class="grey-banner-container"></div>
       </section>
+      <!--Beige Section -->
+      <section class="section beige-green-bg beige-section">
+        <div class="beige-banner-container"></div>
+      </section>
     </main>
+    <script src="./resources/functions/createElement.js"></script>
+    <script src="./resources/functions/use-fetch.js"></script>
     <script src="./resources/js/offers.js"></script>
     <script src="./resources/js/divider.js"></script>
     <script src="./resources/js/articles.js"></script>
@@ -95,6 +103,7 @@
     <script src="./resources/js/texts.js"></script>
     <script src="./resources/js/greenBanner.js"></script>
     <script src="./resources/js/greyBanner.js"></script>
+    <script src="./resources/js/beigeBanner.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
