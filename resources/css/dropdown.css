@@ -14,9 +14,8 @@
   color: var(--white);
 }
 
-.dropdown-messages-container h1 {
+.dropdown-messages-container h3 {
   text-align: center;
-  font-size: 40px;
   padding: 0 0 2rem;
   margin-top: -2rem;
 }
@@ -27,19 +26,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 22px;
   font-weight: bold;
+  font-size: calc(0.8rem + 0.5vw);
 }
-
-
 
 .dropdown-text {
   background-color: var(--white);
   color: var(--black);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-  font-size: 20px;
   padding: 2rem;
+  
 }
 
 .hide {
@@ -81,18 +78,4 @@
   }
 }
 
-@media (max-width: 680px) {
-  .dropdown-title {
-    font-size: 16px;
-  }
 
-  .dropdown-text {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 420px) {
-  .dropdown-messages-container h1 {
-    font-size: 27px;
-  }
-}

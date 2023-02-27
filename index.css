@@ -9,9 +9,46 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* calc font size */
+
+html {
+  font-size: 10px;
+}
+
+a {
+  font-size: calc(0.6rem + 0.5vw);
+}
+p {
+  font-size: calc(0.8rem + 0.5vw);
+}
+h1 {
+  font-size: calc(3.5rem + 1.2vw);
+}
+h2 {
+  font-size: calc(2.5rem + 0.7vw);
+}
+h3 {
+  font-size: calc(2.3rem + 0.7vw);
+}
+h4 {
+  font-size: calc(1.2rem + 0.7vw);
+}
+h5 {
+  font-size: calc(0.9rem + 0.7vw);
+}
+h6 {
+  font-size: calc(0.6rem + 0.7vw);
+}
+
 .body {
   box-sizing: border-box;
   overflow: overlay;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Root colors */
@@ -76,18 +113,23 @@
   background-color: var(--green);
 }
 
-.grey-bg {
-  background-color: var(--greyBg)
+.grey-bg,
+.greyCircle {
+  background-color: var(--greyBg);
+}
+
+.whiteCircle {
+  background-color: var(--white);
 }
 
 .beige-green-bg {
   background-image: url("./resources/images/background/06.png");
 }
 
-
 .block {
-  display: block
+  display: block;
 }
+
 /* Scroll bar */
 
 ::-webkit-scrollbar-track {
@@ -104,5 +146,3 @@
   border-radius: 5rem;
   border: 2px solid rgb(252, 252, 252);
 }
-
-

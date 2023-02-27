@@ -17,8 +17,8 @@ let greyBannerHeader = createElements({
 });
 
 greyBannerHeader.innerHTML = `
-    <h1 class="capitalize green-text">${greyBannerHeaderText}</h1>
-    <p class="bold">${greyBannerHeaderParagraph}</p>
+    <h2 class="capitalize green-text">${greyBannerHeaderText}</h2>
+    <h4 class="bold">${greyBannerHeaderParagraph}</h4>
 `;
 //Wrapper
 let greyBannerWrapper = createElements({
@@ -76,7 +76,7 @@ greyBannerDataLeft.map((item) => {
     classList: "li block",
     childNodes: [greyBannerDivLeftUl],
   });
-  greyBannerDivLeftLi.innerHTML = `<div class="li-div-left"><span>${item}</span><img src="./resources/images/icons/check.png" alt="green&lean" /></div> `;
+  greyBannerDivLeftLi.innerHTML = `<div class="li-div-left"><span><h4>${item}</h4></span><img src="./resources/images/icons/check.png" alt="green&lean" /></div> `;
 });
 
 //Map right
@@ -86,5 +86,5 @@ greyBannerDataRight.map((item) => {
     classList: "li block",
     childNodes: [greyBannerDivRightUl],
   });
-  greyBannerDivRightLi.innerHTML = `<div class="li-div-right"><img src="./resources/images/icons/check.png" alt="green&lean" /><span>${item}</span></div>  `;
+  greyBannerDivRightLi.innerHTML = `<div class="li-div-right"><img src="./resources/images/icons/check.png" alt="green&lean" /><span><h4>${item}</h4></span></div>  `;
 });

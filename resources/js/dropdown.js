@@ -8,7 +8,7 @@ let dropdownMessageContainer = document.querySelector(
 
 const sectionHeader = "Frequently Asked Questions";
 
-dropdownMessageContainer.innerHTML = `<h1>${sectionHeader}</h1>`;
+dropdownMessageContainer.innerHTML = `<h3>${sectionHeader}</h3>`;
 
 let dropdownDiv = [];
 
@@ -21,7 +21,7 @@ dropdowns.map(({ title, text, id, pos }) => {
 
   dropdownDiv.innerHTML = `
   <div class="dropdown-title ${id}">
-    ${title}<span class="arrows"><i class="arrow ${pos}"></i></span>
+    ${title}<span class="arrow ${pos}"></span>
   </div>
   <div class="dropdown-text hide ${id}">
     <p>${text}</p>
@@ -52,8 +52,9 @@ const dropText = () => {
 dropdownButtons.forEach((div) => {
   div.addEventListener("click", function (e) {
     const click = e.target.nextElementSibling;
-
+    setArrowDirection(e.target.lastElementChild);
     if (!click) return;
+
     dropText();
 
     if (click.classList.contains("show")) {
@@ -66,3 +67,19 @@ dropdownButtons.forEach((div) => {
     }
   });
 });
+
+const setArrowDirection = (element) => {
+  document.querySelectorAll(".arrow").forEach((e) => {
+    e.classList.remove("up");
+    e.classList.add("down");
+
+    if (element.classList.contains("up")) {
+      element.classList.remove("up");
+      element.classList.toggle("down");
+    }
+    if (element.classList.contains("down")) {
+      element.classList.remove("down");
+      element.classList.toggle("up");
+    }
+  });
+};

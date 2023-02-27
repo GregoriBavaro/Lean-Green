@@ -24,12 +24,12 @@ let newArticlesPageHeader = createElements({
 });
 
 newArticlesPageHeader.innerHTML = `
-<h1 class="green-text">
+<h3 class="green-text">
     ${newArticleHeader}
-</h1>
-<p class="bold">
+</h3>
+<h4 class="bold">
     ${newArticleHeaderPara}
-</p>
+</h4>
 `;
 
 let newArticleWrapper = [];
@@ -63,7 +63,7 @@ setTimeout(() => {
     newArticlesPhotoWrapper.innerHTML = `<img src="${items.imgPath}" />`;
 
     newArticlesH1 = createElements({
-      Tag: "h1",
+      Tag: "h3",
       classList: "new-articles-h1 green-text",
       childNodes: [newArticlesText],
     });
@@ -92,6 +92,6 @@ setTimeout(() => {
 
     let example = [...items.lists];
     let array = example.map((e) => "&#x2022;" + " " + e + "<br>").join("");
-    newArticlesLi.innerHTML = `${array}`;
+    newArticlesLi.innerHTML = `<p>${array}</p>`;
   });
 }, 200);

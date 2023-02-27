@@ -42,5 +42,5 @@ footerBottom.map(({ link }) => {
 
 footerContainerBottom.innerHTML = `
     <div class="footer-bottom__text"><span>${footerPara}</span></div>
-    <div class="footer-box"><p>${footerBox}</p></div>
+    <div class="footer-box"><span>${footerBox}</span></div>
 `

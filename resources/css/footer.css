@@ -12,18 +12,18 @@
   justify-content: center;
   gap: 1.5rem;
   width: 940px;
+  font-size: calc(0.5rem + 0.5vw);
 }
 
-.footer-container__bottom:last-child p {
+.footer-container__bottom:last-child span {
   width: 940px;
-  font-size: 15px;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
 }
 
 .footer-bottom__text {
   text-align: center;
-  font-size: 14px;
+
 }
 
 .links-container {
@@ -75,11 +75,10 @@
 }
 
 @media (max-width: 1000px) {
-  .footer-container__bottom:last-child p {
+  .footer-container__bottom:last-child span {
     width: 90%;
   }
   
-
   .footer-container__bottom {
     width: 90%;
   }
@@ -107,7 +106,6 @@
 
 @media (max-width: 550px) {
     .footer-container__middle {
-        font-size: 12px;
         padding: 0 2rem;
     }
 }

@@ -1,4 +1,5 @@
 let testimonialsContainer = document.querySelector(".testimonials");
+let articlesSwiperWrapper = document.querySelector(".swiper__articles")
 
 //Data second swiper
 const swiperDataTwo = [
@@ -40,7 +41,7 @@ let swiperSlidesTwo = [];
 let swiperContainer = createElements({
   Tag: "div",
   classList: "swiper-container",
-  childNodes: [articlesContainer],
+  childNodes: [articlesSwiperWrapper],
 });
 
 let = swiperTestimonials = createElements({
@@ -95,7 +96,7 @@ swiperData.map((items) => {
   <div>
     <div class="quotes"><img src="./resources/images/quotes.png" alt="quotes" /></div>
     <p class="italic">"${items.message}"</p>
-    <h4 class="green-text">${items.from}</h4>
+    <p class="green-text from">${items.from}</p>
     <div class="rating">${addShift}</div>
   </div>`;
 });
@@ -120,7 +121,7 @@ swiperDataTwo.map((items) => {
   <div>
     <div class="quotes"><img src="./resources/images/quotes.png" alt="quotes" /></div>
     <p class="italic">"${items.message}"</p>
-    <h4 class="green-text">${items.from}</h4>
+    <p class="green-text from">${items.from}</p>
     <div class="rating">${addShift}</div>
   </div>`;
 });

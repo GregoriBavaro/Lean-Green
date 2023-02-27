@@ -30,9 +30,10 @@ greenBannerLocations.map((location) => {
   });
 
   greenBannerWrapper.innerHTML = `
-<h1>${h1}</h1>
+<h3>${h1}</h3>
 <div class="green-been-wrapper__inside">
-    <div class="green-been-wrapper__para-one"><p>${para1}
+    <div class="green-been-wrapper__para-one">
+    <p>${para1}
     <br><br>
     ${para2}
     <br><br>

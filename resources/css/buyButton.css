@@ -1,10 +1,9 @@
 .buy-button {
   border: none;
   background-color: var(--orange);
-  width: 26rem;
-  height: 3.7rem;
-  border-radius: 0.6rem;
-  font-size: 1.5rem;
+  width: 600px;
+  height: 70px;
+  border-radius: 1.5rem;
   padding: 0.2rem 1.7rem;
   cursor: pointer;
   transition: all 0.5s;
@@ -17,9 +16,15 @@
 
 /* Breakpoints */
 
+@media (max-width: 800px) {
+  .buy-button {
+    width: 300px;
+    
+  }
+}
+
 @media (max-width: 480px) {
   .buy-button {
-    width: 50%;
-    height: 3rem;
+    width: 200px;
   }
 }

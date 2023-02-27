@@ -1,5 +1,7 @@
 .texts {
   max-width: 1170px;
+  margin-top: 5rem;
+  padding: 1.7rem 0;
 }
 
 @media (max-width: 1250px) {

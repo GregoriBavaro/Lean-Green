@@ -4,7 +4,7 @@ import { beigeBannerData } from "../data/banners-data.js";
 //Parent element
 let BeigeBannerContainer = document.querySelector(".beige-banner-container");
 
-BeigeBannerContainer.innerHTML = `<h1>SAFE AND EFFECTIVE</h1>`
+BeigeBannerContainer.innerHTML = `<h3>SAFE AND EFFECTIVE</h3>`
 
 //Models wrapper
 let beigeModelsWrapper = createElements({
@@ -27,7 +27,7 @@ beigeBannerData.map((model) => {
         <img src=${model.imgPath} />
     </div>
     <div class="beige-model__title green-text">
-        <h1>${model.title}</h1>
+        <h5 class="uppercase">${model.title}</h5>
     </div>
     <div class="beige-model__text">
         <p>${model.paragraph}</p>

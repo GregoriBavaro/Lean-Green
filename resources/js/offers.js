@@ -33,14 +33,14 @@ data.map((items) => {
   });
 
   modelHeaderText = createElements({
-    Tag: "h3",
+    Tag: "h4",
     classList: "model-header__text",
     childNodes: [modelHeader],
   });
   modelHeaderText.innerHTML = `${items.header}`;
 
   modelH4 = createElements({
-    Tag: "h4",
+    Tag: "h5",
     classList: "model-h4",
     childNodes: [model],
   });
@@ -51,21 +51,21 @@ data.map((items) => {
     classList: "model-img-container",
     childNodes: [model],
   });
-  imgContainer.innerHTML = `<img class="${items.imgClass}" src=${items.imgPath} />`;
+  imgContainer.innerHTML = `<img class="${items.imgClass}" src=${items.imgPath} alt="offers"/>`;
 
   saveText = createElements({
     Tag: "div",
     classList: "model-save",
     childNodes: [model],
   });
-  saveText.innerHTML = `Save ${items.saveText}`;
+  saveText.innerHTML = `<p>Save ${items.saveText}</p>`;
 
   amountText = createElements({
-    Tag: "h1",
+    Tag: "h2",
     classList: "model-amount",
     childNodes: [model],
   });
-  amountText.innerHTML = `$${items.amountText}`;
+  amountText.innerText = `$${items.amountText}`;
 
   buyButtonContainer = createElements({
     Tag: "div",
@@ -74,7 +74,7 @@ data.map((items) => {
   });
   buyButtonContainer.innerHTML = `
   <button>
-    <h2 class="uppercase bold">buy now</h2>${items.buttonInnerText}
+    <h4 class="uppercase bold">buy now</h2>${items.buttonInnerText}
   </button> 
   <h6 class="weight-500">Regular price: 
     <span class="line-through">${items.regularPriceText}
@@ -85,5 +85,5 @@ data.map((items) => {
     classList: "model-pay-options__wrapper",
     childNodes: [model],
   });
-  payOptions.innerHTML = `<img src="./resources/images/pay-options.png" />`;
+  payOptions.innerHTML = `<img src="./resources/images/pay-options.png" alt="pay options"/>`;
 });

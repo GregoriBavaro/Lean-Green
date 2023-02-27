@@ -40,7 +40,7 @@ setTimeout(() => {
       childNodes: [articlesWrapper],
     });
 
-    articleHeaderWrapper.innerHTML = `<h1 class="green-text uppercase">${items.articleHeader}</h1>`;
+    articleHeaderWrapper.innerHTML = `<h4 class="green-text uppercase">${items.articleHeader}</h4>`;
 
     articleTextWrapper = createElements({
       Tag: "div",

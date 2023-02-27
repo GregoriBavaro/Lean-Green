@@ -28,8 +28,7 @@
   text-align: right;
 }
 
-.grey-banner-wrapper ul li {
-  font-size: 25px;
+.grey-banner-wrapper ul li h4 {
   font-weight: 500;
 }
 
@@ -55,14 +54,11 @@
   text-align: center;
 }
 
-.grey-banner-header h1 {
-  font-size: 50px;
-}
 
-.grey-banner-header p {
-  inline-size: 1170px;
+.grey-banner-header h4 {
+  inline-size: 900px;
   margin-top: 0.8rem;
-  font-size: 38px;
+  padding: 1rem;
 }
 
 /* Breakpoints */
@@ -73,10 +69,9 @@
     padding: 2rem;
   }
 
-  .grey-banner-header p {
+  .grey-banner-header h4 {
     inline-size: 90vw;
     margin-top: 0.8rem;
-    font-size: 3vw;
   }
 
   .grey-banner-wrapper ul {
@@ -86,7 +81,6 @@
 
 @media (max-width: 960px) {
   .grey-banner-wrapper ul li {
-    font-size: 18px;
     font-weight: 500;
   }
 
@@ -124,11 +118,6 @@
   }
 }
 
-@media (max-width: 550px) {
-  .grey-banner-container p {
-    font-size: 3.5vw;
-  }
-}
 
 @media (max-width: 450px) {
   .grey-section {
@@ -136,12 +125,10 @@
   }
 
   .grey-banner-wrapper ul li {
-    font-size: 15px;
     font-weight: 500;
   }
 
   .grey-banner-container h1 {
-    font-size: 20px;
     width: unset;
   }
 
