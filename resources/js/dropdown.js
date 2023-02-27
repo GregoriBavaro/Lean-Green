@@ -21,7 +21,7 @@ dropdowns.map(({ title, text, id, pos }) => {
 
   dropdownDiv.innerHTML = `
   <div class="dropdown-title ${id}">
-    <span>${title}</span><span class="arrows"><i class="arrow ${pos}"></i></span>
+    ${title}<span class="arrows"><i class="arrow ${pos}"></i></span>
   </div>
   <div class="dropdown-text hide ${id}">
     <p>${text}</p>

@@ -9,6 +9,7 @@
   );
 }
 
+
 .hero-container__text {
   flex-basis: 40%;
   display: flex;
@@ -19,7 +20,7 @@
 
 .hero-text-wrapper {
   position: absolute;
-  width: 450px;
+  width: 680px;
   right: 45%;
   display: flex;
   flex-direction: column;
@@ -39,8 +40,8 @@
 
 .hero-container__text h1 {
   font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 45px;
+  font-size: 62px;
+  line-height: 74px;
 }
 
 .hero-container__text h1 span {
@@ -50,8 +51,8 @@
 
 
 .hero-container__text p {
-  font-size: 1.3rem;
-  line-height: 26px;
+  font-size: 36px;
+  line-height: 46px;
 }
 
 .hero-container__text p span {
@@ -60,10 +61,49 @@
 }
 
 .hero-paragraph {
-  width: 382px;
+  width: 582px;
 }
 
 /* Breakpoints */
+
+@media (max-width: 1550px) {
+  .hero-container__text p {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .hero-container__text h1 {
+    font-size: 52px;
+    line-height: 74px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .hero-container__text p {
+    font-size: 2vw;
+    line-height: 36px;
+  }
+
+  .hero-container__text h1 {
+    font-size: 3.5vw;
+    line-height: 54px;
+  }
+
+  .hero-text-wrapper {
+    width: 680px;
+    right: 35%;
+  }
+
+  .hero-text-wrapper {
+    width: 500px;
+  }
+
+  .hero-paragraph {
+    width: 382px;
+  }
+}
+
+
 
 @media (max-width: 960px) {
   .hero-container {

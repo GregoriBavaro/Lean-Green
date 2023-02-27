@@ -1,6 +1,8 @@
 .dropdown-messages-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 2rem;
 }
@@ -25,11 +27,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.dropdown-title span {
-  font-size: 22px;
-}
+
 
 .dropdown-text {
   background-color: var(--white);
@@ -53,7 +55,6 @@
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 6px;
-  
 }
 
 .down {
@@ -66,3 +67,32 @@
   -webkit-transform: rotate(-135deg);
 }
 
+/* Breakpointes */
+
+@media (max-width: 1240px) {
+  .dropdown-div {
+    width: 90%;
+  }
+}
+
+@media (max-width: 720px) {
+  .dropdown-messages-container h1 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 680px) {
+  .dropdown-title {
+    font-size: 16px;
+  }
+
+  .dropdown-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .dropdown-messages-container h1 {
+    font-size: 27px;
+  }
+}
